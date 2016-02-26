@@ -58,7 +58,16 @@ class TTT_stubs{
    }
    
    static int makeChoice(char []b, char s){
-      return(0);
+   Scanner scam = new Scanner(System.in);
+   System.out.println("What row would you like to go in?");
+   int rawRow = scam.nextInt();
+   System.out.println("What column would you like to go in?");
+   int col = scam.nextInt();
+   int row=(rawRow-1)*3;
+   int playCode=(row+col-1);
+   b[playCode]=s;
+   
+      return(playCode);
    } //make choice
    
 }// TTT
